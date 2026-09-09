@@ -12,41 +12,57 @@
 <body>
 
     <header>
+
         <div class="logo">
             PATINAJE <span>STATS</span>
         </div>
 
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="alumnos.html">Alumnos</a>
+            <a href="patinadores.html">Patinadores</a>
             <a href="rankings.html">Rankings</a>
         </nav>
+
     </header>
+
 
     <main class="pagina">
 
-       <section class="encabezado-pagina">
-    <p class="etiqueta">COMUNIDAD</p>
-    <h1>Patinadores de Mexicali</h1>
+        <section class="encabezado-pagina">
 
-    <p>
-        Consulta perfiles, estadísticas, niveles y récords
-        de patinadores de Mexicali.
-    </p>
-</section>
+            <p class="etiqueta">COMUNIDAD</p>
 
-        <section class="grid-alumnos" id="lista-alumnos">
-            <!-- JavaScript pondrá aquí las tarjetas -->
+            <h1>Patinadores de Mexicali</h1>
+
+            <p>
+                Conoce a los patinadores de la comunidad,
+                consulta sus estadísticas, niveles y récords personales.
+            </p>
+
+        </section>
+
+
+        <section
+            class="grid-alumnos"
+            id="lista-patinadores">
+            
+            <!--
+                Las tarjetas se generan automáticamente
+                con JavaScript.
+            -->
+
         </section>
 
     </main>
 
+
     <footer>
-        Patinaje Stats
+        Patinaje Stats · Mexicali
     </footer>
 
-    <script src="alumnos.js"></script>
-    <script src="lista-alumnos.js"></script>
+
+    <script src="patinadores.js"></script>
+    <script src="lista-patinadores.js"></script>
 
 </body>
 </html>
