@@ -1,4 +1,4 @@
-const alumnos = [
+const patinadores = [
     {
         id: "alexander",
         nombre: "Alexander",
