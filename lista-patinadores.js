@@ -2,15 +2,12 @@ const contenedor = document.getElementById("lista-patinadores");
 
 patinadores.forEach(patinador => {
 
-    // Crear tarjeta
     const tarjeta = document.createElement("a");
 
     tarjeta.className = "tarjeta-alumno";
 
-    // Al hacer clic nos llevará al perfil de ese patinador
     tarjeta.href = `perfil.html?id=${patinador.id}`;
 
-    // Contenido de la tarjeta
     tarjeta.innerHTML = `
         <img
             src="${patinador.foto}"
@@ -31,7 +28,6 @@ patinadores.forEach(patinador => {
         </div>
     `;
 
-    // Añadir tarjeta a la página
     contenedor.appendChild(tarjeta);
 
 });
