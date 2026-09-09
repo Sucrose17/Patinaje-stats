@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1220;
+    color: white;
+}
+
+header {
+    height: 75px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #263244;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+main {
+    min-height: calc(100vh - 125px);
+}
+
+.hero {
+    padding: 110px 10% 90px;
+    max-width: 1100px;
+}
+
+.etiqueta {
+    color: #38bdf8;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.descripcion {
+    color: #94a3b8;
+    max-width: 550px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 35px;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.botones a {
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton-principal {
+    background: #38bdf8;
+    color: #07111f;
+}
+
+.boton-secundario {
+    border: 1px solid #475569;
+    color: white;
+}
+
+.resumen {
+    margin: 0 7% 70px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: #111c2e;
+    border: 1px solid #263244;
+    border-radius: 15px;
+}
+
+.stat {
+    text-align: center;
+    border-right: 1px solid #263244;
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat strong {
+    display: block;
+    font-size: 32px;
+    color: #38bdf8;
+}
+
+.stat span {
+    display: block;
+    margin-top: 8px;
+    color: #94a3b8;
+}
+
+footer {
+    height: 50px;
+    text-align: center;
+    color: #64748b;
+}
+
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 80px 7% 60px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .resumen {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .stat {
+        border-right: none;
+    }
+}
