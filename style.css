@@ -177,3 +177,96 @@ footer {
         border-right: none;
     }
 }
+
+/* =========================
+   PÁGINA DE ALUMNOS
+========================= */
+
+.pagina {
+    padding: 70px 7%;
+}
+
+.encabezado-pagina {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.encabezado-pagina h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.encabezado-pagina > p:last-child {
+    color: #94a3b8;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.grid-alumnos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.tarjeta-alumno {
+    background: #111c2e;
+    border: 1px solid #263244;
+    border-radius: 15px;
+    overflow: hidden;
+
+    color: white;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tarjeta-alumno:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.tarjeta-alumno img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+}
+
+.contenido-tarjeta h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contenido-tarjeta p {
+    color: #94a3b8;
+    line-height: 1.5;
+    min-height: 70px;
+}
+
+.nivel-destacado {
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid #263244;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #94a3b8;
+}
+
+.nivel-destacado strong {
+    font-size: 28px;
+    color: #38bdf8;
+}
