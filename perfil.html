@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil | Patinaje Stats</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            PATINAJE <span>STATS</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="patinadores.html">Patinadores</a>
+            <a href="rankings.html">Rankings</a>
+        </nav>
+    </header>
+
+
+    <main class="pagina-perfil">
+
+        <a href="patinadores.html" class="volver">
+            ← Volver a patinadores
+        </a>
+
+
+        <section class="perfil-superior">
+
+            <div class="perfil-foto-contenedor">
+
+                <div id="perfil-foto"></div>
+
+            </div>
+
+
+            <div class="perfil-info">
+
+                <p class="etiqueta">PERFIL DE PATINADOR</p>
+
+                <h1 id="perfil-nombre">
+                    Patinador
+                </h1>
+
+                <div
+                    class="modalidades-perfil"
+                    id="perfil-modalidades">
+                </div>
+
+                <p
+                    class="perfil-descripcion"
+                    id="perfil-descripcion">
+                </p>
+
+                <div class="dato-extra">
+                    <span>Tiempo patinando</span>
+                    <strong id="perfil-tiempo"></strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion-perfil">
+
+            <div class="titulo-seccion">
+                <p class="etiqueta">MARCAS PERSONALES</p>
+                <h2>Estadísticas</h2>
+            </div>
+
+
+            <div class="grid-estadisticas">
+
+                <div class="tarjeta-estadistica">
+                    <span>100 metros</span>
+                    <strong id="stat-100m">—</strong>
+                    <small>segundos</small>
+                </div>
+
+
+                <div class="tarjeta-estadistica">
+                    <span>Salto vertical</span>
+                    <strong id="stat-salto-vertical">—</strong>
+                    <small>centímetros</small>
+                </div>
+
+
+                <div class="tarjeta-estadistica">
+                    <span>Salto de longitud</span>
+                    <strong id="stat-salto-longitud">—</strong>
+                    <small>metros</small>
+                </div>
+
+
+                <div class="tarjeta-estadistica">
+                    <span>Distancia máxima</span>
+                    <strong id="stat-distancia">—</strong>
+                    <small>kilómetros</small>
+                </div>
+
+
+                <div class="tarjeta-estadistica">
+                    <span>Tiempo distancia máxima</span>
+                    <strong id="stat-tiempo-distancia">—</strong>
+                </div>
+
+
+                <div class="tarjeta-estadistica">
+                    <span>20 km</span>
+                    <strong id="stat-20km">—</strong>
+                    <small>tiempo</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion-perfil habilidades-seccion">
+
+            <div class="titulo-seccion">
+                <p class="etiqueta">NIVELES</p>
+                <h2>Habilidades</h2>
+            </div>
+
+
+            <div class="habilidades-contenedor">
+
+                <div class="lista-habilidades">
+
+                    <div class="habilidad">
+                        <span>Control</span>
+                        <strong id="nivel-control">—</strong>
+                    </div>
+
+                    <div class="habilidad">
+                        <span>Velocidad</span>
+                        <strong id="nivel-velocidad">—</strong>
+                    </div>
+
+                    <div class="habilidad">
+                        <span>Resistencia</span>
+                        <strong id="nivel-resistencia">—</strong>
+                    </div>
+
+                    <div class="habilidad">
+                        <span>Agilidad</span>
+                        <strong id="nivel-agilidad">—</strong>
+                    </div>
+
+                    <div class="habilidad">
+                        <span>Saltos</span>
+                        <strong id="nivel-saltos">—</strong>
+                    </div>
+
+                    <div class="habilidad">
+                        <span>Frenos</span>
+                        <strong id="nivel-frenos">—</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="radar-contenedor">
+                    <canvas id="graficoRadar"></canvas>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Patinaje Stats · Mexicali
+    </footer>
+
+
+    <script src="patinadores.js"></script>
+    <script src="perfil.js"></script>
+
+</body>
+</html>
