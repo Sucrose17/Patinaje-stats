@@ -1528,3 +1528,142 @@ main {
         0 0 22px
         rgba(250, 204, 21, 0.18);
 }
+
+/* =========================================================
+   NIVEL GENERAL DENTRO DEL PERFIL
+   ========================================================= */
+
+.nombre-y-nivel {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 18px;
+}
+
+
+.nombre-y-nivel h1 {
+    margin-bottom: 0;
+}
+
+
+.nivel-general-perfil {
+    min-width: 115px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 13px 15px;
+
+    background: #111e30;
+
+    border: 1px solid #26384f;
+
+    border-radius: 14px;
+}
+
+
+.nivel-general-perfil span {
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+
+    white-space: nowrap;
+}
+
+
+.nivel-general-perfil strong {
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    font-size: 36px;
+
+    font-weight: 900;
+
+    border: 1px solid transparent;
+}
+
+
+/* Nivel S más destacado dentro del perfil */
+
+.nivel-general-perfil strong.nivel-s {
+    box-shadow:
+        0 0 30px
+        rgba(250, 204, 21, 0.20);
+}
+
+
+/* =========================================================
+   NIVEL GENERAL EN CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .nombre-y-nivel {
+        align-items: flex-end;
+
+        gap: 15px;
+    }
+
+    .nivel-general-perfil {
+        min-width: 90px;
+
+        padding: 10px;
+    }
+
+    .nivel-general-perfil span {
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+    .nivel-general-perfil strong {
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .nombre-y-nivel {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .nivel-general-perfil {
+        flex-direction: row;
+
+        width: auto;
+
+        gap: 12px;
+    }
+
+}
