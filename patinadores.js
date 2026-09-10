@@ -5,7 +5,7 @@ const patinadores = [
 
         nombre: "Alexander",
 
-        foto: "",
+        foto: "img/alexander.jpg",
 
         descripcion:
             "Patinador de Mexicali enfocado en slalom, patinaje urbano, saltos y larga distancia.",
