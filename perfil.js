@@ -67,6 +67,22 @@ if (!patinador) {
 
     document.getElementById("perfil-tiempo")
         .textContent = patinador.tiempoPatinando;
+    /* NIVEL GENERAL */
+
+const nivelGeneral =
+    calcularNivelGeneral(patinador);
+
+const nivelGeneralElemento =
+    document.getElementById(
+        "perfil-nivel-general"
+    );
+
+nivelGeneralElemento.textContent =
+    nivelGeneral;
+
+nivelGeneralElemento.classList.add(
+    `nivel-${nivelGeneral.toLowerCase()}`
+);
 
 
     // MODALIDADES
