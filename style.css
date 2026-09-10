@@ -322,3 +322,342 @@ footer {
     font-size: 12px;
     font-weight: bold;
 }
+
+/* =========================
+   PERFIL DE PATINADOR
+========================= */
+
+.pagina-perfil {
+    padding: 60px 7% 100px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.volver {
+    display: inline-block;
+
+    color: #94a3b8;
+    text-decoration: none;
+
+    margin-bottom: 40px;
+}
+
+.volver:hover {
+    color: #38bdf8;
+}
+
+
+/* PARTE SUPERIOR */
+
+.perfil-superior {
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 380px)
+        1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    margin-bottom: 90px;
+}
+
+.perfil-foto-contenedor {
+    width: 100%;
+}
+
+#perfil-foto {
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    border:
+        1px solid #263244;
+
+    background: #111c2e;
+}
+
+#perfil-foto img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.perfil-placeholder {
+    aspect-ratio: 1 / 1;
+}
+
+.perfil-info h1 {
+    font-size:
+        clamp(45px, 6vw, 80px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -3px;
+}
+
+.perfil-descripcion {
+    color: #94a3b8;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+
+    margin-top: 25px;
+}
+
+.modalidades-perfil {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.modalidades-perfil span {
+    padding: 7px 12px;
+
+    background: #17263c;
+
+    border:
+        1px solid #263b57;
+
+    border-radius: 20px;
+
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.dato-extra {
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.dato-extra span {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.dato-extra strong {
+    font-size: 20px;
+}
+
+
+/* SECCIONES */
+
+.seccion-perfil {
+    margin-top: 90px;
+}
+
+.titulo-seccion {
+    margin-bottom: 35px;
+}
+
+.titulo-seccion h2 {
+    font-size: 38px;
+}
+
+
+/* ESTADÍSTICAS */
+
+.grid-estadisticas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(190px, 1fr)
+        );
+
+    gap: 18px;
+}
+
+.tarjeta-estadistica {
+    min-height: 150px;
+
+    padding: 25px;
+
+    background: #111c2e;
+
+    border:
+        1px solid #263244;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.tarjeta-estadistica span {
+    color: #94a3b8;
+}
+
+.tarjeta-estadistica strong {
+    color: #38bdf8;
+
+    font-size: 36px;
+
+    margin-top: 15px;
+}
+
+.tarjeta-estadistica small {
+    color: #64748b;
+
+    margin-top: 4px;
+}
+
+
+/* HABILIDADES */
+
+.habilidades-contenedor {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 420px)
+        1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.lista-habilidades {
+    background: #111c2e;
+
+    border:
+        1px solid #263244;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+.habilidad {
+    padding: 18px 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid #263244;
+}
+
+.habilidad:last-child {
+    border-bottom: none;
+}
+
+.habilidad span {
+    color: #cbd5e1;
+}
+
+.habilidad strong {
+    color: #38bdf8;
+
+    font-size: 30px;
+}
+
+.radar-contenedor {
+    position: relative;
+
+    height: 500px;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    width: 100%;
+}
+
+
+/* PERFIL NO ENCONTRADO */
+
+.perfil-no-encontrado {
+    min-height: 500px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.perfil-no-encontrado h1 {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.perfil-no-encontrado p {
+    color: #94a3b8;
+
+    margin-bottom: 25px;
+}
+
+.perfil-no-encontrado a {
+    color: #38bdf8;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* PERFIL EN CELULAR */
+
+@media (max-width: 800px) {
+
+    .perfil-superior {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .perfil-foto-contenedor {
+        max-width: 400px;
+    }
+
+    .perfil-info h1 {
+        letter-spacing: -2px;
+    }
+
+    .habilidades-contenedor {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .radar-contenedor {
+        height: 400px;
+    }
+
+}
+
+
