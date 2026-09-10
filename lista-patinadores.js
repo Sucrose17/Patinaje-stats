@@ -1,12 +1,22 @@
-const contenedor = document.getElementById("lista-patinadores");
+const contenedor =
+    document.getElementById(
+        "lista-patinadores"
+    );
+
 
 patinadores.forEach(patinador => {
 
-    const tarjeta = document.createElement("a");
+    const tarjeta =
+        document.createElement("a");
 
-    tarjeta.className = "tarjeta-alumno";
+    tarjeta.className =
+        "tarjeta-alumno";
 
-    tarjeta.href = `perfil.html?id=${patinador.id}`;
+    tarjeta.href =
+        `perfil.html?id=${patinador.id}`;
+
+
+    /* FOTO */
 
     let imagen;
 
@@ -16,7 +26,6 @@ patinadores.forEach(patinador => {
             <img
                 src="${patinador.foto}"
                 alt="Foto de ${patinador.nombre}"
-                onerror="this.style.display='none'"
             >
         `;
 
@@ -24,15 +33,33 @@ patinadores.forEach(patinador => {
 
         imagen = `
             <div class="foto-placeholder">
-                ${patinador.nombre.charAt(0).toUpperCase()}
+                ${patinador.nombre
+                    .charAt(0)
+                    .toUpperCase()}
             </div>
         `;
 
     }
 
-    const modalidades = patinador.modalidades
-        .map(modalidad => `<span>${modalidad}</span>`)
-        .join("");
+
+    /* MODALIDADES */
+
+    const modalidades =
+        patinador.modalidades
+            .map(
+                modalidad =>
+                    `<span>${modalidad}</span>`
+            )
+            .join("");
+
+
+    /* NIVEL GENERAL */
+
+    const nivelGeneral =
+        calcularNivelGeneral(
+            patinador
+        );
+
 
     tarjeta.innerHTML = `
 
@@ -40,20 +67,37 @@ patinadores.forEach(patinador => {
 
         <div class="contenido-tarjeta">
 
-            <h2>${patinador.nombre}</h2>
+            <h2>
+                ${patinador.nombre}
+            </h2>
+
 
             <div class="modalidades-tarjeta">
                 ${modalidades}
             </div>
 
-            <p>${patinador.descripcion}</p>
+
+            <p>
+                ${patinador.descripcion}
+            </p>
+
 
             <div class="nivel-destacado">
 
-                <span>Control</span>
+                <div class="nivel-general-texto">
 
-                <strong>
-                    ${patinador.niveles.control}
+                    <span>
+                        Nivel general
+                    </span>
+
+                </div>
+
+
+                <strong
+                    class="nivel-general-badge nivel-${nivelGeneral.toLowerCase()}">
+
+                    ${nivelGeneral}
+
                 </strong>
 
             </div>
@@ -61,6 +105,9 @@ patinadores.forEach(patinador => {
         </div>
     `;
 
-    contenedor.appendChild(tarjeta);
+
+    contenedor.appendChild(
+        tarjeta
+    );
 
 });
