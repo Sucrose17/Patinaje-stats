@@ -8,21 +8,54 @@ patinadores.forEach(patinador => {
 
     tarjeta.href = `perfil.html?id=${patinador.id}`;
 
+    let imagen;
+
+    if (patinador.foto) {
+
+        imagen = `
+            <img
+                src="${patinador.foto}"
+                alt="Foto de ${patinador.nombre}"
+                onerror="this.style.display='none'"
+            >
+        `;
+
+    } else {
+
+        imagen = `
+            <div class="foto-placeholder">
+                ${patinador.nombre.charAt(0).toUpperCase()}
+            </div>
+        `;
+
+    }
+
+    const modalidades = patinador.modalidades
+        .map(modalidad => `<span>${modalidad}</span>`)
+        .join("");
+
     tarjeta.innerHTML = `
-        <img
-            src="${patinador.foto}"
-            alt="Foto de ${patinador.nombre}"
-        >
+
+        ${imagen}
 
         <div class="contenido-tarjeta">
 
             <h2>${patinador.nombre}</h2>
 
+            <div class="modalidades-tarjeta">
+                ${modalidades}
+            </div>
+
             <p>${patinador.descripcion}</p>
 
             <div class="nivel-destacado">
-                Control
-                <strong>${patinador.niveles.control}</strong>
+
+                <span>Control</span>
+
+                <strong>
+                    ${patinador.niveles.control}
+                </strong>
+
             </div>
 
         </div>
