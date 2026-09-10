@@ -129,35 +129,48 @@ if (!patinador) {
 
     const niveles = patinador.niveles;
 
-    document.getElementById(
-        "nivel-control"
-    ).textContent =
-        niveles.control;
+    function aplicarNivel(idElemento, nivel) {
 
-    document.getElementById(
-        "nivel-velocidad"
-    ).textContent =
-        niveles.velocidad;
+    const elemento =
+        document.getElementById(idElemento);
 
-    document.getElementById(
-        "nivel-resistencia"
-    ).textContent =
-        niveles.resistencia;
+    elemento.textContent = nivel;
 
-    document.getElementById(
-        "nivel-agilidad"
-    ).textContent =
-        niveles.agilidad;
+    elemento.classList.add(
+        `nivel-${nivel.toLowerCase()}`
+    );
+}
 
-    document.getElementById(
-        "nivel-saltos"
-    ).textContent =
-        niveles.saltos;
 
-    document.getElementById(
-        "nivel-frenos"
-    ).textContent =
-        niveles.frenos;
+aplicarNivel(
+    "nivel-control",
+    niveles.control
+);
+
+aplicarNivel(
+    "nivel-velocidad",
+    niveles.velocidad
+);
+
+aplicarNivel(
+    "nivel-resistencia",
+    niveles.resistencia
+);
+
+aplicarNivel(
+    "nivel-agilidad",
+    niveles.agilidad
+);
+
+aplicarNivel(
+    "nivel-saltos",
+    niveles.saltos
+);
+
+aplicarNivel(
+    "nivel-frenos",
+    niveles.frenos
+);
 
 
     // CONVERTIR E-S A NÚMEROS
