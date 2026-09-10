@@ -986,3 +986,362 @@ main {
     }
 
 }
+
+/* =========================================================
+   FIX DEFINITIVO DE RANKINGS
+   ========================================================= */
+
+.rankings-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    margin-top: 30px;
+}
+
+
+.ranking-card {
+    display: block;
+
+    background: #0e1929 !important;
+
+    border: 1px solid #203047 !important;
+
+    border-radius: 18px !important;
+
+    overflow: hidden !important;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* CABECERA DE CADA RANKING */
+
+.ranking-header {
+    min-height: 105px;
+
+    padding: 24px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    border-bottom:
+        1px solid #203047 !important;
+}
+
+
+.etiqueta-ranking {
+    color: #38bdf8 !important;
+
+    font-size: 11px !important;
+
+    font-weight: 900 !important;
+
+    letter-spacing: 2px !important;
+
+    margin-bottom: 6px !important;
+}
+
+
+.ranking-header h2 {
+    color: #f8fafc !important;
+
+    font-size: 27px !important;
+
+    margin: 0 !important;
+}
+
+
+.ranking-icono {
+    width: 48px !important;
+
+    height: 48px !important;
+
+    flex: 0 0 48px;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    border-radius: 12px !important;
+
+    background:
+        rgba(56, 189, 248, 0.08) !important;
+
+    border:
+        1px solid
+        rgba(56, 189, 248, 0.18) !important;
+
+    color: #38bdf8 !important;
+
+    font-size: 24px !important;
+}
+
+
+/* LISTA */
+
+.ranking-lista {
+    display: block !important;
+}
+
+
+.ranking-fila {
+    min-height: 76px !important;
+
+    padding: 12px 20px !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        44px
+        46px
+        minmax(0, 1fr)
+        auto !important;
+
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    width: 100%;
+
+    color: #f8fafc !important;
+
+    text-decoration: none !important;
+
+    border-bottom:
+        1px solid #1d2c40 !important;
+
+    background: transparent;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.ranking-fila:last-child {
+    border-bottom: none !important;
+}
+
+
+.ranking-fila:hover {
+    background:
+        rgba(56, 189, 248, 0.055) !important;
+}
+
+
+/* POSICIÓN */
+
+.ranking-posicion {
+    width: 38px;
+
+    text-align: center;
+
+    color: #94a3b8 !important;
+
+    font-size: 18px !important;
+
+    font-weight: 900 !important;
+}
+
+
+/* FOTO */
+
+.ranking-avatar {
+    width: 42px !important;
+
+    height: 42px !important;
+}
+
+
+.ranking-avatar img {
+    width: 42px !important;
+
+    height: 42px !important;
+
+    object-fit: cover !important;
+
+    border-radius: 50% !important;
+
+    display: block !important;
+}
+
+
+.ranking-inicial {
+    width: 42px !important;
+
+    height: 42px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #19314e,
+            #101c2d
+        ) !important;
+
+    border:
+        1px solid #2b405b !important;
+
+    color: #38bdf8 !important;
+
+    font-weight: 900 !important;
+
+    text-decoration: none !important;
+}
+
+
+/* NOMBRE */
+
+.ranking-nombre {
+    color: #f8fafc !important;
+
+    font-size: 15px !important;
+
+    font-weight: 700 !important;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* MARCA */
+
+.ranking-valor {
+    color: #38bdf8 !important;
+
+    font-size: 18px !important;
+
+    font-weight: 900 !important;
+
+    white-space: nowrap !important;
+
+    text-align: right;
+}
+
+
+/* QUITAR MORADO DE LINKS */
+
+.ranking-card a,
+.ranking-card a:visited,
+.ranking-card a:active {
+    color: inherit !important;
+
+    text-decoration: none !important;
+}
+
+
+/* SIN REGISTROS */
+
+.ranking-vacio {
+    padding: 40px 25px !important;
+
+    color: #64748b !important;
+
+    text-align: center !important;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PODIO
+   ========================================================= */
+
+.ranking-fila:nth-child(1) {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(250, 204, 21, 0.07),
+            transparent
+        );
+}
+
+
+.ranking-fila:nth-child(2) {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(203, 213, 225, 0.05),
+            transparent
+        );
+}
+
+
+.ranking-fila:nth-child(3) {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(180, 83, 9, 0.05),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .rankings-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .ranking-header {
+        padding: 20px !important;
+    }
+
+    .ranking-header h2 {
+        font-size: 23px !important;
+    }
+
+    .ranking-fila {
+        grid-template-columns:
+            34px
+            40px
+            minmax(0, 1fr)
+            auto !important;
+
+        gap: 9px !important;
+
+        padding: 10px 13px !important;
+    }
+
+    .ranking-avatar,
+    .ranking-avatar img,
+    .ranking-inicial {
+        width: 38px !important;
+
+        height: 38px !important;
+    }
+
+    .ranking-nombre {
+        font-size: 13px !important;
+    }
+
+    .ranking-valor {
+        font-size: 14px !important;
+    }
+
+}
