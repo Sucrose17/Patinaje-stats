@@ -1476,3 +1476,55 @@ main {
         0 0 28px
         rgba(250, 204, 21, 0.22);
 }
+
+/* =========================================================
+   NIVEL GENERAL EN TARJETAS
+   ========================================================= */
+
+.nivel-general-texto {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.nivel-general-texto span {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.nivel-general-badge {
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 29px !important;
+
+    font-weight: 900;
+
+    border: 1px solid transparent;
+}
+
+
+/* Nivel S general un poco más especial */
+
+.nivel-general-badge.nivel-s {
+
+    box-shadow:
+        0 0 22px
+        rgba(250, 204, 21, 0.18);
+}
