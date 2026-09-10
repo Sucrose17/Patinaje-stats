@@ -270,3 +270,55 @@ footer {
     font-size: 28px;
     color: #38bdf8;
 }
+
+/* =========================
+   FOTO TEMPORAL
+========================= */
+
+.foto-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #142238,
+            #1e3a5f
+        );
+
+    color: #38bdf8;
+
+    font-size: 100px;
+    font-weight: 900;
+}
+
+
+/* =========================
+   MODALIDADES
+========================= */
+
+.modalidades-tarjeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-bottom: 15px;
+}
+
+.modalidades-tarjeta span {
+    padding: 5px 9px;
+
+    background: #17263c;
+
+    border: 1px solid #263b57;
+    border-radius: 20px;
+
+    color: #38bdf8;
+
+    font-size: 12px;
+    font-weight: bold;
+}
