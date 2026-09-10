@@ -5,7 +5,7 @@ const patinadores = [
 
         nombre: "Alexander",
 
-        foto: "https://via.placeholder.com/400x400?text=Alexander",
+        foto: "",
 
         descripcion:
             "Patinador de Mexicali enfocado en slalom, patinaje urbano, saltos y larga distancia.",
@@ -29,26 +29,20 @@ const patinadores = [
 
         records: {
             metros100: 14.82,
-
             saltoVertical: 48,
-
             saltoLongitud: 1.72,
-
             distanciaMaxima: 100,
-
             tiempoDistanciaMaxima: "5 h 34 min",
-
             km20: null
         }
     },
-
 
     {
         id: "patinador-prueba",
 
         nombre: "Patinador de prueba",
 
-        foto: "https://via.placeholder.com/400x400?text=Patinador",
+        foto: "",
 
         descripcion:
             "Perfil temporal utilizado para probar el sistema de Patinaje Stats.",
@@ -70,15 +64,10 @@ const patinadores = [
 
         records: {
             metros100: 18.31,
-
             saltoVertical: 32,
-
             saltoLongitud: 1.20,
-
             distanciaMaxima: 25,
-
             tiempoDistanciaMaxima: "1 h 45 min",
-
             km20: null
         }
     }
