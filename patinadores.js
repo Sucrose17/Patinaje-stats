@@ -73,3 +73,109 @@ const patinadores = [
     }
 
 ];
+/* =========================================================
+   CÁLCULO DEL NIVEL GENERAL
+   ========================================================= */
+
+const valorNiveles = {
+    E: 1,
+    D: 2,
+    C: 3,
+    B: 4,
+    A: 5,
+    S: 6
+};
+
+
+const nivelesOrdenados = [
+    "S",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+];
+
+
+function calcularNivelGeneral(patinador) {
+
+    const niveles = patinador.niveles;
+
+    const estadisticas = [
+        niveles.control,
+        niveles.agilidad,
+        niveles.frenos,
+        niveles.saltos,
+        niveles.velocidad,
+        niveles.resistencia
+    ];
+
+
+    for (const nivelGeneral of nivelesOrdenados) {
+
+        const valorObjetivo =
+            valorNiveles[nivelGeneral];
+
+
+        /*
+            CONDICIÓN 1
+
+            Al menos 4 de las 6 estadísticas
+            deben estar en este nivel o superior.
+        */
+
+        const cantidadCumplen =
+            estadisticas.filter(nivel =>
+
+                valorNiveles[nivel] >=
+                valorObjetivo
+
+            ).length;
+
+
+        if (cantidadCumplen < 4) {
+            continue;
+        }
+
+
+        /*
+            CONDICIÓN 2
+
+            Frenos puede estar como máximo
+            un nivel por debajo.
+
+            Ejemplos:
+
+            General S → Frenos mínimo A
+            General A → Frenos mínimo B
+            General B → Frenos mínimo C
+            General C → Frenos mínimo D
+            General D → Frenos mínimo E
+        */
+
+        const valorFrenos =
+            valorNiveles[niveles.frenos];
+
+        const minimoFrenos =
+            Math.max(
+                1,
+                valorObjetivo - 1
+            );
+
+
+        if (valorFrenos < minimoFrenos) {
+            continue;
+        }
+
+
+        /*
+            Si cumple las dos condiciones,
+            este es su nivel general.
+        */
+
+        return nivelGeneral;
+    }
+
+
+    return "E";
+}
